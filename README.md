@@ -61,6 +61,12 @@ $ npm run test:cov
 ## ENV
 
 ```bash
+## Required for Discord OAuth2
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+DISCORD_REDIRECT_URI=http://localhost:3001/api/auth/redirect
+FRONTEND_HOST="http://localhost:3000"  
+##cokkie secret
 COOKIE_SECRET= 
 ## Required for psql
 
