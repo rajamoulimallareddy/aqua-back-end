@@ -24,7 +24,7 @@ async function bootstrap() {
   const sessionRepository = dataSource.getRepository(Session);
   app.use(
     session({
-      secret: 'bfhebfibgfherbgherkhgberigb', // This should not be hardcoded, an .env variable is preferred.
+      secret: process.env.COOKIE_SECRET, // This should not be hardcoded, an .env variable is preferred.
       resave: false,
       saveUninitialized: false,
       store: sessionStore.connect(sessionRepository),
